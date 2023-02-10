@@ -1,5 +1,4 @@
 const path = require('path');
-var webpack = require('webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 // const TerserPlugin = require("terser-webpack-plugin");
@@ -11,7 +10,8 @@ module.exports = {
     entry: ['./src/js/index.js', './src/scss/style.scss'],
     output: {
         filename: './app.min.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        assetModuleFilename: 'static/assets/[hash][ext][query]'
     },
     watch: false,
     module: {
@@ -28,31 +28,8 @@ module.exports = {
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader']
             },
             {
-                test: /\.(png|jpg|jpeg|gif)$/,
-                use: [
-                    {
-                        loader: "file-loader",
-                        options: {
-                            name: "[name].[ext]",
-                            publicPath: "./img",
-                            emitFile: false
-                        }
-                    }
-                ]
-            },
-            {
-                test: /\.(svg)$/,
+                test: /\.(png|jpg|jpeg|gif|svg|eot|ttf|woff|woff2)$/i,
                 type: 'asset/resource',
-                generator: {
-                    filename: './svg/[hash][ext][query]',
-                },
-            },
-            {
-                test: /\.(woff(2)?|ttf|eot)$/,
-                type: 'asset/resource',
-                generator: {
-                    filename: './fonts/[hash][ext][query]',
-                },
             },
             {
                 test: /\.html$/i,
@@ -70,6 +47,7 @@ module.exports = {
                 context: path.resolve(__dirname, "src"),
                 from: "./*.html",
               },
+              { from: "src/static", to: "static" },
             ],
         }),
     ],
@@ -88,8 +66,3 @@ module.exports = {
         ]
     }
 };
-
-new webpack.ProvidePlugin({
-    $: 'jquery',
-    jQuery: 'jquery',
-});

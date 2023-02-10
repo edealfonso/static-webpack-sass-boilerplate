@@ -1,9 +1,11 @@
 # npm
 node_modules
 
-# webpack
+# boilerplate
 dist
 build
+
+// webpack
 package-lock.json
 
 # Mac OSX

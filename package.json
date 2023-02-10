@@ -1,15 +1,15 @@
 {
-  "name": "vitamin3-landing",
+  "name": "project-name",
   "version": "1.0.0",
   "description": "",
-  "main": "src/script.js",
+  "main": "src/js/index.js",
   "scripts": {
     "dev": "webpack --config webpack.config.js --progress",
     "prod": "webpack --config webpack.config.prod.js --progress"
   },
   "repository": {
     "type": "git",
-    "url": "git+git@github.com:edealfonso/vitamin3-landing.git"
+    "url": "git+git@github.com:edealfonso/webpack-sass-boilerplate.git"
   },
   "author": "Elsa de Alfonso",
   "license": "ISC",
@@ -19,7 +19,6 @@
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.2.0",
     "css-minimizer-webpack-plugin": "3.4.1",
-    "file-loader": "^6.2.0",
     "html-minimizer-webpack-plugin": "^4.3.0",
     "mini-css-extract-plugin": "^2.6.0",
     "postcss": "^8.4.20",
