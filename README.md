@@ -1,6 +1,8 @@
-# Webpack SASS Boilerplate for static HTML
+# Static Webpack5-SASS boilerplate
 
-by Elsa de Alfonso
+Webpack5-SASS boilerplate intended to create static HTML websites.
+
+By Elsa de Alfonso
 elsa.de.alfonso@gmail.com
 
 ## Features
