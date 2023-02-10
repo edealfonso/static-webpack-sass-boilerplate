@@ -6,12 +6,12 @@ const CopyPlugin = require("copy-webpack-plugin");
 module.exports = {
     mode: "development",
     devtool: "source-map",
+    watch: true,
     entry: ['./src/js/index.js', './src/scss/style.scss'],
     output: {
         filename: './app.min.js',
         path: path.resolve(__dirname, 'build')
     },
-    watch: true,
     module: {
         rules: [
             {
