@@ -76,7 +76,12 @@ module.exports = {
     optimization: {
         minimize: true,
         minimizer: [
-            // new TerserPlugin(),
+            // new TerserPlugin({
+            //     minify: TerserPlugin.uglifyJsMinify,
+            //     // `terserOptions` options will be passed to `uglify-js`
+            //     // Link to options - https://github.com/mishoo/UglifyJS#minify-options
+            //     terserOptions: {},
+            // }),
             new CssMinimizerPlugin(),
             new HtmlMinimizerPlugin(),
             `...`, // webpack@5 feature: extend existing minimizers (i.e. `terser-webpack-plugin`)

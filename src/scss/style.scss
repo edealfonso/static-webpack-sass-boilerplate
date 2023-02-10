@@ -1,2 +1,14 @@
+// core
 @import 'reset';
+@import 'vars';
 @import 'base';
+@import 'fonts';
+
+// layouts
+@import 'layouts/form-newsletter';
+
+// components
+@import 'components/buttons';
+
+// pages
+@import 'pages/home';

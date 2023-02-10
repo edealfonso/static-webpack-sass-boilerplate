@@ -1,0 +1,28 @@
+// Media queries
+$media-desktop: "only screen and (max-width : 1024px)";
+$media-tablet: "only screen and (max-width : 990px)";
+$media-mobile: "only screen and (max-width : 767px)";
+$media-mobile-sm: "only screen and (max-width : 375px)";
+
+// Colors
+$cream: rgb(250, 250, 240);
+
+// Spacing
+$padx: 5rem; 
+$pady: 4rem; 
+$padt: 2.3rem; 
+$padm: 1.5rem; 
+
+// Fonts
+$f: Arial, sans-serif;
+
+// Font-sizes
+// $size-h1: clamp(50px, 4vw, 70px); 
+// $size-h2: clamp(25px, 2.4vw, 40px); 
+
+// $size-80: clamp(57px, 8vw, 80px); 
+// $size-65: clamp(45px, 6.5vw, 65px);
+// $size-55: clamp(35px, 5.5vw, 55px); 
+
+
+

@@ -1,4 +1,135 @@
-body {
-  color: black;
-  background-color: green;
+/******************************************************************/
+/*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
+
+/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert;
 }
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+Remove list styles (bullets/numbers)
+in case you use it with normalize.css
+*/
+ol, ul {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* Removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+
+
+/****************************************************************
+/ https://css-tricks.com/css-fix-for-100vh-in-mobile-webkit/
+/****************************************************************/
+
+html {
+  height: -webkit-fill-available;
+}
+
+body {
+  min-height: 100%;
+  min-height: -webkit-fill-available;
+}
+
+
+
+/****************************************************************
+/ custom scrollbar
+/****************************************************************/
+
+body {
+  overflow: auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #232323;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: white;
+}
+
+
+/****************************************************************
+/ spacing reset
+/****************************************************************/
+
+ul, ol {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-size: unset;
+  font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  display: inline;
+}
+
+/****************************************************************
+/ my approach
+/****************************************************************/
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  
+  // font rendering an aliasing
+  text-rendering: geometricPrecision;
+  font-smooth: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  // overscroll
+  overscroll-behavior: none;
+
+  // aparition
+  transition: opacity 0.2s;
+  &.hidden {
+      opacity: 0;
+  }
+  
+}  

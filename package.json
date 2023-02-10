@@ -4,8 +4,8 @@
   "description": "",
   "main": "src/script.js",
   "scripts": {
-    "watch": "webpack --config webpack.config.js --progress",
-    "dist": "webpack --config webpack.config.prod.js --progress"
+    "dev": "webpack --config webpack.config.js --progress",
+    "prod": "webpack --config webpack.config.prod.js --progress"
   },
   "repository": {
     "type": "git",
